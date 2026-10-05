@@ -1,0 +1,528 @@
+/* =====================================================
+   PÁGINA DA HISTÓRIA DE HARQUIE
+   ===================================================== */
+
+
+/* ================= APRESENTAÇÃO ================= */
+
+.historia-hero {
+    min-height: 85vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #3a080d 0%,
+            #160609 40%,
+            #080808 75%
+        );
+}
+
+.historia-hero-conteudo {
+    max-width: 900px;
+}
+
+.historia-subtitulo {
+    color: var(--dourado);
+
+    letter-spacing: 6px;
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.historia-hero h1 {
+    font-family: "Cinzel", serif;
+
+    font-size: 85px;
+    letter-spacing: 12px;
+
+    color: var(--branco);
+}
+
+.historia-hero h2 {
+    font-family: "Cinzel", serif;
+
+    color: var(--vermelho);
+
+    font-size: 30px;
+    letter-spacing: 6px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================= CAPÍTULOS ================= */
+
+.capitulo {
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: auto;
+    padding: 120px 30px;
+
+    overflow: hidden;
+}
+
+.capitulo-escuro {
+    max-width: none;
+
+    padding-left: max(30px, calc((100% - 1140px) / 2));
+    padding-right: max(30px, calc((100% - 1140px) / 2));
+
+    background: #0d0d0d;
+}
+
+
+/* Número grande decorativo */
+
+.numero-capitulo {
+    position: absolute;
+
+    top: 40px;
+    right: 50px;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 180px;
+    font-weight: bold;
+
+    color: rgba(155, 24, 36, 0.08);
+
+    user-select: none;
+}
+
+
+/* Conteúdo do capítulo */
+
+.capitulo-conteudo {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    gap: 70px;
+}
+
+.capitulo-imagem {
+    flex: 1;
+}
+
+.capitulo-imagem img {
+    width: 100%;
+    height: 600px;
+
+    object-fit: cover;
+
+    border: 1px solid var(--dourado);
+
+    box-shadow:
+        0 0 30px rgba(155, 24, 36, 0.15);
+
+    transition: 0.4s;
+}
+
+.capitulo-imagem img:hover {
+    transform: scale(1.02);
+
+    box-shadow:
+        0 0 40px rgba(155, 24, 36, 0.3);
+}
+
+.capitulo-texto {
+    flex: 1;
+}
+
+.capitulo-label {
+    color: var(--dourado);
+
+    font-size: 13px;
+    letter-spacing: 5px;
+
+    margin-bottom: 10px;
+}
+
+.capitulo-texto h2 {
+    font-family: "Cinzel", serif;
+
+    color: var(--branco);
+
+    font-size: 38px;
+
+    margin-bottom: 30px;
+}
+
+.capitulo-texto p {
+    color: var(--cinza);
+
+    margin-bottom: 18px;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* Alterna imagem/texto */
+
+.inverter {
+    flex-direction: row-reverse;
+}
+
+
+/* ================= FRASES IMPORTANTES ================= */
+
+.destaque-historia {
+    font-family: "Cinzel", serif;
+
+    color: var(--dourado) !important;
+
+    font-size: 22px !important;
+
+    border-left: 3px solid var(--vermelho);
+
+    padding: 15px 0 15px 20px;
+
+    margin-top: 30px !important;
+}
+
+
+/* ================= QUEDA DE ELDRATH ================= */
+
+.queda {
+    position: relative;
+
+    min-height: 850px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* Imagem de fundo */
+
+.queda-fundo {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+}
+
+.queda-fundo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* Escurece a imagem */
+
+.queda::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.93),
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.9)
+        );
+}
+
+
+/* Texto sobre a imagem */
+
+.queda-conteudo {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 750px;
+
+    text-align: center;
+
+    padding: 80px 30px;
+}
+
+.queda-conteudo h2 {
+    font-family: "Cinzel", serif;
+
+    color: var(--branco);
+
+    font-size: 48px;
+
+    margin-bottom: 30px;
+}
+
+.queda-conteudo p {
+    color: #ccc;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+.queda-conteudo h3 {
+    font-family: "Cinzel", serif;
+
+    color: var(--dourado);
+
+    font-size: 28px;
+    letter-spacing: 3px;
+
+    margin-top: 35px;
+}
+
+
+/* ================= ÚLTIMO CAPÍTULO ================= */
+
+.capitulo-final {
+    padding-top: 140px;
+    padding-bottom: 140px;
+
+    background:
+        radial-gradient(
+            circle at bottom left,
+            #270509,
+            var(--preto) 55%
+        );
+}
+
+.nome-final {
+    font-family: "Cinzel", serif;
+
+    color: var(--branco);
+
+    font-size: 40px;
+
+    letter-spacing: 8px;
+
+    margin-top: 35px;
+}
+
+.titulo-final {
+    font-family: "Cinzel", serif;
+
+    color: var(--vermelho) !important;
+
+    letter-spacing: 5px;
+
+    font-size: 18px !important;
+}
+
+
+/* ================= FINAL DA HISTÓRIA ================= */
+
+.final-historia {
+    min-height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 30px;
+
+    background:
+        radial-gradient(
+            circle,
+            var(--vermelho-escuro),
+            var(--preto) 65%
+        );
+}
+
+.final-historia p {
+    font-family: "Cinzel", serif;
+
+    font-size: 28px;
+
+    color: var(--branco);
+
+    margin-bottom: 10px;
+}
+
+.final-historia p:nth-child(3) {
+    color: var(--dourado);
+
+    margin-bottom: 50px;
+}
+
+
+/* =====================================================
+   BOTÃO LER MAIS DA PÁGINA PRINCIPAL
+   ===================================================== */
+
+.botao-ler {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 11px 28px;
+
+    color: var(--dourado);
+
+    border: 1px solid var(--dourado);
+
+    text-decoration: none;
+
+    font-family: "Cinzel", serif;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.botao-ler:hover {
+    background: var(--dourado);
+
+    color: var(--preto);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 20px rgba(197, 154, 74, 0.2);
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE DA HISTÓRIA
+   ===================================================== */
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .historia-hero h1 {
+        font-size: 60px;
+    }
+
+    .capitulo-conteudo {
+        gap: 40px;
+    }
+
+    .capitulo-imagem img {
+        height: 500px;
+    }
+
+    .numero-capitulo {
+        font-size: 130px;
+    }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .historia-hero {
+        min-height: 75vh;
+    }
+
+    .historia-hero h1 {
+        font-size: 42px;
+
+        letter-spacing: 6px;
+    }
+
+    .historia-hero h2 {
+        font-size: 18px;
+
+        letter-spacing: 3px;
+    }
+
+    .historia-subtitulo {
+        letter-spacing: 3px;
+    }
+
+
+    /* Capítulos ficam em uma coluna */
+
+    .capitulo {
+        padding: 80px 20px;
+    }
+
+    .capitulo-conteudo,
+    .inverter {
+        flex-direction: column;
+    }
+
+    .capitulo-imagem {
+        width: 100%;
+    }
+
+    .capitulo-imagem img {
+        height: 450px;
+    }
+
+    .capitulo-texto h2 {
+        font-size: 30px;
+    }
+
+    .capitulo-texto p {
+        font-size: 16px;
+    }
+
+
+    /* Número decorativo */
+
+    .numero-capitulo {
+        top: 15px;
+        right: 20px;
+
+        font-size: 100px;
+    }
+
+
+    /* Queda de Eldrath */
+
+    .queda {
+        min-height: 750px;
+    }
+
+    .queda-conteudo {
+        padding: 60px 20px;
+    }
+
+    .queda-conteudo h2 {
+        font-size: 34px;
+    }
+
+    .queda-conteudo p {
+        font-size: 16px;
+    }
+
+
+    /* Final */
+
+    .final-historia {
+        min-height: 500px;
+    }
+
+    .final-historia p {
+        font-size: 21px;
+    }
+
+}
